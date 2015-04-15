@@ -44,6 +44,15 @@
 // =black
 // 	font-family: "roboto-black", Arial, sans-serif 
 
++font(museosanscyrl, museosanscyrl)
+=muse
+	font-family: "museosanscyrl", Arial, sans-serif
+=ubold
+	font-weight: 900
+=ulight
+	font-weight: 100
+=bold
+	font-weight: 700 
 
 a
 	text-decoration: none
@@ -51,9 +60,177 @@ a
 		text-decoration: none
 
 body
-	font-size: 18px 
-	line-height: 1.7
-	background: $bg
+	font-size: 16px 
+	line-height: 1.5
+	color: $black 
 	min-width: 320px
+	+muse
+	+ulight
 	+r(768)
 		font-size: 14px
+.conteiner
+	max-width: 1280px
+	margin: 0 auto
+.row
+	&_marg
+		.promo-img
+			margin-bottom: 50px 
+.wrap
+	padding: 80px 0 60px
+.header
+	background: $main-dark
+	&__logo
+		display: block
+		margin-top: 18px
+		+svg(logo, 105,23)
+.menu
+	+clr
+	&__item
+		float: left
+		position: relative
+		text-align: center
+		z-index: 100
+		&:hover
+			background: $black 
+			.menu__hover
+				visibility: visible
+			
+	&__item-link
+		display: inline-block
+		padding: 18px 15px 20px
+		+ubold
+		text-transform: uppercase
+		color: $white
+		font-size: 14px
+		z-index: 100
+		position: relative
+		
+	&__hover-item
+		visibility: hidden
+		background: $black
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0 
+	&__hover
+		visibility: hidden
+		position: absolute
+		left: 0
+		top: 100%
+		z-index: 3
+.chan
+	+clr
+	padding: 35px
+	background: $black
+	min-width: 350px 
+	&__item		
+		margin-bottom: 12px
+		padding-left: 18px
+		width: 50%
+		float: left
+		text-align: left
+		font-size: 12px
+	&__link
+		position: relative
+		color: $white
+		text-transform: uppercase  
+		span
+			+ubold
+		p
+			+ulight
+.icon-ball
+	display: block
+	position: absolute
+	height: 8px
+	width: 8px
+	border-radius: 50%
+	top: 3px
+	left: -18px
+	background: #FFF
+	&.is-salmon
+		background: #d62128
+	&.is-ultramarin
+		background: #0137B1
+	&.is-marin
+		background: #0B4E8D
+	&.is-lime
+		background: #91B40A
+	&.is-red
+		background: #ae1800
+	&.is-skyblue
+		background: #00ADD4
+	&.is-blue
+		background: #005F9C 
+	  
+
+
+
+.btn
+	display: inline-block
+	text-transform: uppercase
+	+bold
+	font-size: 14px
+	&_feedback
+		padding: 7px 33px 6px
+		border: 2px solid $grey 
+		font-size: 9px
+		color: $white
+	&_transparent
+		margin-top: 9px
+		padding: 6px 30px 5px
+		color: $black
+		border: 5px solid $blue
+	&_subscr
+		margin-top: 30px
+		padding: 12px 55px
+		background: $blue
+		border-radius: 2px
+		color: $white
+		 
+		
+.title
+	margin-bottom: 11px
+	font-size: 18px
+	text-transform: uppercase 
+	+ubold
+	color: $black
+.text
+	margin-bottom: 13px
+.footer
+	padding: 10px 0
+	background: $main-dark 
+	font-size: 10px
+	color: $grey
+	text-transform: uppercase
+.copyright
+	margin-top: 4px
+
+	 
+.promo-img
+	position: relative
+	font-size: 0
+	&:after
+		content: ""
+		position: absolute
+		bottom: 0
+		right: -90px
+		left: -90px
+		height: 1px
+		background: #EBEBEB 
+	&_asymmetry
+		&:after
+			content: ""
+			position: absolute
+			bottom: 0
+			left: 160px
+			right: 65px
+.subscribe
+	margin-bottom: 60px
+	padding: 60px 0
+	background: $main-dark
+	&__title
+		color: $white
+		text-transform: uppercase
+		+ubold
+		font-size: 18px 
