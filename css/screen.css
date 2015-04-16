@@ -36,28 +36,33 @@ body { font-size: 16px; line-height: 1.5; color: black; min-width: 320px; font-f
 
 .container { max-width: 1280px; margin: 0 auto; }
 
-.row_marg .promo-img { margin-bottom: 50px; }
+.row_marg { margin-bottom: 50px; }
 
 .wrap { padding: 80px 0 60px; }
+@media only screen and (max-width: 992px) { .wrap { padding: 60px 0 40px; } }
 
 .header { background: #1a1a1a; }
-.header__logo { display: block; margin-top: 18px; background: url("../img/svg/logo.svg") no-repeat 0 0; -moz-background-size: 105px 23px; -o-background-size: 105px 23px; -webkit-background-size: 105px 23px; background-size: 105px 23px; width: 105px; height: 23px; display: inline-block; }
+@media only screen and (max-width: 992px) { .header { text-align: center; } }
+.header__logo { display: inline-block; margin-top: 18px; background: url("../img/svg/logo.svg") no-repeat 0 0; -moz-background-size: 105px 23px; -o-background-size: 105px 23px; -webkit-background-size: 105px 23px; background-size: 105px 23px; width: 105px; height: 23px; display: inline-block; }
 
 .menu { *zoom: 1; }
 .menu:after { content: " "; display: table; clear: both; }
-.menu__item { float: left; position: relative; text-align: center; z-index: 100; -moz-transition: background, 0.2s; -o-transition: background, 0.2s; -webkit-transition: background, 0.2s; transition: background, 0.2s; }
+.menu__item { float: left; position: relative; text-align: center; z-index: 50; -moz-transition: background, 0.2s; -o-transition: background, 0.2s; -webkit-transition: background, 0.2s; transition: background, 0.2s; }
 .menu__item:hover { background: black; }
 .menu__item:hover .menu__hover { visibility: visible; }
-.menu__item-link { display: inline-block; padding: 18px 15px 20px; font-family: "museosanscyrl_900", Arial, sans-serif; text-transform: uppercase; color: white; font-size: 14px; z-index: 100; position: relative; }
-@media only screen and (max-width: 1200px) { .menu__item-link { padding: 18px 12px 20px; } }
-.menu__hover { visibility: hidden; position: absolute; left: 0; top: 100%; z-index: 3; -moz-transition: visibility, 0.2s; -o-transition: visibility, 0.2s; -webkit-transition: visibility, 0.2s; transition: visibility, 0.2s; }
+@media only screen and (max-width: 992px) { .menu__item { float: none; } }
+.menu__item-link { display: inline-block; padding: 18px 15px 20px; font-family: "museosanscyrl_900", Arial, sans-serif; text-transform: uppercase; color: white; font-size: 14px; z-index: 50; position: relative; }
+@media only screen and (max-width: 1200px) { .menu__item-link { padding: 18px 12px 20px; font-size: 13px; } }
+@media only screen and (max-width: 992px) { .menu__item-link { text-align: center; padding: 14px 0 16px; } }
+.menu__hover { visibility: hidden; position: absolute; left: 0; top: 100%; z-index: 100; -moz-transition: visibility, 0.2s; -o-transition: visibility, 0.2s; -webkit-transition: visibility, 0.2s; transition: visibility, 0.2s; }
 
 .chan { *zoom: 1; padding: 35px; background: black; min-width: 350px; }
 .chan:after { content: " "; display: table; clear: both; }
 .chan__item { margin-bottom: 12px; padding-left: 18px; width: 50%; float: left; text-align: left; font-size: 12px; }
-.chan__link { position: relative; color: white; text-transform: uppercase; }
+.chan__link { position: relative; color: white; text-transform: uppercase; -moz-transition: color, 0.2s; -o-transition: color, 0.2s; -webkit-transition: color, 0.2s; transition: color, 0.2s; }
 .chan__link span { font-family: "museosanscyrl_900", Arial, sans-serif; }
 .chan__link p { font-family: "museosanscyrl_100", Arial, sans-serif; }
+.chan__link:hover { color: #44b6f0; }
 
 .icon-ball { display: block; position: absolute; height: 8px; width: 8px; border-radius: 50%; top: 3px; left: -18px; background: white; }
 .icon-ball.is-salmon { background: #d62128; }
@@ -73,6 +78,7 @@ body { font-size: 16px; line-height: 1.5; color: black; min-width: 320px; font-f
 .btn_feedback:hover { border-color: #aeaeae; }
 .btn_transparent { margin-top: 9px; padding: 6px 30px 5px; color: black; border: 5px solid #44b6f0; -moz-transition: border-color, 0.2s; -o-transition: border-color, 0.2s; -webkit-transition: border-color, 0.2s; transition: border-color, 0.2s; }
 .btn_transparent:hover { border-color: #15a4ec; }
+@media only screen and (max-width: 768px) { .btn_transparent { text-align: center; } }
 .btn_subscr { margin-top: 30px; padding: 12px 55px 12px 89px; background: #44b6f0; border-radius: 2px; color: white; -moz-transition: background, 0.2s; -o-transition: background, 0.2s; -webkit-transition: background, 0.2s; transition: background, 0.2s; }
 .btn_subscr span { position: relative; display: inline-block; }
 .btn_subscr span:before { content: ""; position: absolute; top: 0; left: -34px; background: url("../img/svg/mail.svg") no-repeat 0 0; -moz-background-size: 24px 18px; -o-background-size: 24px 18px; -webkit-background-size: 24px 18px; background-size: 24px 18px; width: 24px; height: 18px; display: inline-block; }
@@ -84,14 +90,24 @@ body { font-size: 16px; line-height: 1.5; color: black; min-width: 320px; font-f
 
 .footer { padding: 10px 0; background: #1a1a1a; font-size: 10px; color: #888888; text-transform: uppercase; }
 
-.copyright { margin-top: 4px; }
+.copyright { margin-top: 5px; }
+.copyright span { padding-top: 2px; }
 
-.promo-img { position: relative; font-size: 0; }
+.icon-design { display: inline-block; margin-left: 12px; vertical-align: middle; background: url('../img/icons-s5de8eba6de.png') 0 0 no-repeat; width: 92px; height: 8px; }
+
+.promo-img { position: relative; font-size: 0; *zoom: 1; }
+.promo-img:after { content: " "; display: table; clear: both; }
 .promo-img:after { content: ""; position: absolute; bottom: 0; right: -80px; left: -80px; height: 1px; background: #ebebeb; }
+@media only screen and (max-width: 992px) { .promo-img:after { display: none; } }
+@media only screen and (max-width: 768px) { .promo-img_phone { float: right; } }
+@media only screen and (max-width: 992px) { .promo-img_asymmetry { margin-bottom: 20px; } }
 .promo-img_asymmetry:after { content: ""; position: absolute; bottom: 0; left: 136px; right: 65px; }
 
 .subscribe { margin-bottom: 60px; padding: 60px 0; background: #1a1a1a; }
+@media only screen and (max-width: 992px) { .subscribe { padding: 60px 20px; } }
+@media only screen and (max-width: 768px) { .subscribe { padding: 40px 20px; } }
 .subscribe__title { color: white; text-transform: uppercase; font-family: "museosanscyrl_900", Arial, sans-serif; font-size: 18px; }
+@media only screen and (max-width: 992px) { .subscribe__title { font-size: 16px; } }
 
 .app__item { margin-top: 30px; }
 .app__item a { display: block; }
