@@ -72,6 +72,9 @@ body
 .container
 	max-width: 1280px
 	margin: 0 auto
+	&_no-pad
+		.col-xs-12
+			padding: 0
 .row
 	&_marg
 		margin-bottom: 50px 
@@ -118,8 +121,10 @@ body
 			padding: 18px 12px 20px
 			font-size: 13px
 		+r(992)
-			text-align: center
+			display: block
 			padding: 14px 0 16px
+		&.is-active
+			color: $blue
 	&__hover
 		display: none
 		position: absolute
@@ -139,6 +144,7 @@ body
 		text-align: left
 		font-size: 12px
 	&__link
+		display: block
 		position: relative
 		color: $white
 		text-transform: uppercase 
@@ -263,6 +269,7 @@ body
 	&_phone
 		+r(768)
 			float: right
+			margin-top: 20px
 	&_asymmetry
 		+r(992)
 			margin-bottom: 20px
@@ -276,6 +283,7 @@ body
 	margin-bottom: 60px
 	padding: 60px 0
 	background: $main-dark
+	+clr
 	+r(992)
 		padding: 60px 20px
 	+r(768)
@@ -301,4 +309,45 @@ body
 		+svg(android, 32, 44)
 	&__win
 		+svg(win, 44, 42)
-
+.banner
+	margin: 20px 0 40px 
+	img
+		width: 100%
+		height: auto
+	+r(768)
+		margin-bottom: 20px
+.article
+	+clr
+	padding-bottom: 40px 
+	h1
+		margin-bottom: 32px
+		font-size: 48px
+		+ubold
+		text-transform: uppercase
+		+r(768)
+			font-size: 40px
+			margin-bottom: 20px
+	a
+		color: $blue
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+	p
+		margin-bottom: 23px
+	strong
+		+bold
+.link
+	color: $blue
+	text-decoration: underline
+	&:hover
+		text-decoration: none
+.title
+	margin-bottom: 32px
+	font-size: 48px
+	+ubold
+	text-transform: uppercase
+	+r(768)
+		font-size: 40px
+		margin-bottom: 20px
+.contacts
+	margin-top: 48px 
