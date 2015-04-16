@@ -100,10 +100,9 @@ body { font-size: 16px; line-height: 1.5; color: black; min-width: 320px; font-f
 
 .icon-design { display: inline-block; margin-left: 12px; vertical-align: middle; background: url('../img/icons-s5de8eba6de.png') 0 0 no-repeat; width: 92px; height: 8px; }
 
-.promo-img { position: relative; font-size: 0; *zoom: 1; }
-.promo-img:after { content: " "; display: table; clear: both; }
+.promo-img { position: relative; font-size: 0; }
 .promo-img:after { content: ""; position: absolute; bottom: 0; right: -80px; left: -80px; height: 1px; background: #ebebeb; }
-@media only screen and (max-width: 992px) { .promo-img:after { display: none; } }
+@media only screen and (max-width: 1200px) { .promo-img:after { display: none; } }
 @media only screen and (max-width: 768px) { .promo-img_phone { float: right; margin-top: 20px; } }
 @media only screen and (max-width: 992px) { .promo-img_asymmetry { margin-bottom: 20px; } }
 .promo-img_asymmetry:after { content: ""; position: absolute; bottom: 0; left: 136px; right: 65px; }
