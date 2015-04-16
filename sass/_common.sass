@@ -44,15 +44,17 @@
 // =black
 // 	font-family: "roboto-black", Arial, sans-serif 
 
-+font(museosanscyrl, museosanscyrl)
-=muse
-	font-family: "museosanscyrl", Arial, sans-serif
-=ubold
-	font-weight: 900
++font(museosanscyrl_100, museosanscyrl_100)
++font(museosanscyrl_700, museosanscyrl_700)
++font(museosanscyrl_900, museosanscyrl_900)
+
 =ulight
-	font-weight: 100
+	font-family: "museosanscyrl_100", Arial, sans-serif
 =bold
-	font-weight: 700 
+	font-family: "museosanscyrl_700", Arial, sans-serif 
+=ubold
+	font-family: "museosanscyrl_900", Arial, sans-serif
+
 
 a
 	text-decoration: none
@@ -64,7 +66,6 @@ body
 	line-height: 1.5
 	color: $black 
 	min-width: 320px
-	+muse
 	+ulight
 	+r(768)
 		font-size: 14px
@@ -90,6 +91,8 @@ body
 		position: relative
 		text-align: center
 		z-index: 100
+		+transition(background, .2s)
+		
 		&:hover
 			background: $black 
 			.menu__hover
@@ -104,21 +107,15 @@ body
 		font-size: 14px
 		z-index: 100
 		position: relative
-		
-	&__hover-item
-		visibility: hidden
-		background: $black
-		position: absolute
-		top: 0
-		bottom: 0
-		left: 0
-		right: 0 
+		+r(1200)
+			padding: 18px 12px 20px
 	&__hover
 		visibility: hidden
 		position: absolute
 		left: 0
 		top: 100%
 		z-index: 3
+		+transition(visibility, .2s)
 .chan
 	+clr
 	padding: 35px
@@ -176,18 +173,36 @@ body
 		border: 2px solid $grey 
 		font-size: 9px
 		color: $white
+		+transition(border-color, .2s)
+		&:hover
+			border-color: lighten($grey, 15%)
 		
 	&_transparent
 		margin-top: 9px
 		padding: 6px 30px 5px
 		color: $black
 		border: 5px solid $blue
+		+transition(border-color, .2s)
+		&:hover
+			border-color: darken($blue, 10%)
 	&_subscr
 		margin-top: 30px
-		padding: 12px 55px
+		padding: 12px 55px 12px 89px
 		background: $blue
 		border-radius: 2px
 		color: $white
+		+transition(background, .2s)
+		span
+			position: relative
+			display: inline-block
+			&:before
+				content: ""
+				position: absolute
+				top: 0
+				left: -34px 
+				+svg(mail, 24, 18)
+		&:hover
+			background: darken($blue, 10%) 
 		 
 		
 .title
@@ -211,12 +226,15 @@ body
 .promo-img
 	position: relative
 	font-size: 0
+	// img
+	// 	width: 100%
+	// 	height: auto
 	&:after
 		content: ""
 		position: absolute
 		bottom: 0
-		right: -90px
-		left: -90px
+		right: -80px
+		left: -80px
 		height: 1px
 		background: #EBEBEB 
 	&_asymmetry
@@ -224,7 +242,7 @@ body
 			content: ""
 			position: absolute
 			bottom: 0
-			left: 160px
+			left: 136px
 			right: 65px
 .subscribe
 	margin-bottom: 60px
@@ -234,4 +252,19 @@ body
 		color: $white
 		text-transform: uppercase
 		+ubold
-		font-size: 18px 
+		font-size: 18px
+
+.app
+	&__item
+		margin-top: 30px
+		a
+			display: block
+		&:first-child
+			margin-top: 90px
+	&__ios
+		+svg(ios, 38, 48)
+	&__android
+		+svg(android, 32, 44)
+	&__win
+		+svg(win, 44, 42)
+
