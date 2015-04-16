@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="92" height="8" viewBox="0 0 92 8">
+  <defs>
+    <style>
+
+      .cls-2 {
+        font-size: 22.973px;
+      }
+
+      .cls-4 {
+        fill: #ffffff;
+        font-family: "AkzidenzGroteskPro-Super";
+        font-size: 22.973px;
+        text-transform: uppercase;
+      }
+
+      .cls-5 {
+        fill: #ff0000;
+        font-family: "AkzidenzGroteskPro-Super";
+        font-size: 22.973px;
+        text-transform: uppercase;
+      }
+    </style>
+  </defs>
+  <text class="cls-2" transform="translate(0 8) scale(0.44)"><tspan class="cls-2"><tspan class="cls-4">Design</tspan><tspan class="cls-5">-</tspan><tspan class="cls-4">lab</tspan><tspan class="cls-5">.</tspan><tspan class="cls-4">ru</tspan></tspan></text>
+</svg>
