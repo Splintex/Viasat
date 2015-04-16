@@ -81,6 +81,8 @@ body
 		padding: 60px 0 40px
 .header
 	background: $main-dark
+	position: relative
+	z-index: 10 
 	+r(992)
 		text-align: center
 	&__logo
@@ -94,12 +96,12 @@ body
 		float: left
 		position: relative
 		text-align: center
-		z-index: 50
-		+transition(background, .2s)		
+		z-index: 1		
 		&:hover
-			background: $black 
+			background: $black
+			z-index: 2 
 			.menu__hover
-				visibility: visible
+				display: block
 		+r(992)
 			float: none
 			
@@ -118,14 +120,11 @@ body
 		+r(992)
 			text-align: center
 			padding: 14px 0 16px
-			
-
 	&__hover
-		visibility: hidden
+		display: none
 		position: absolute
 		left: 0
 		top: 100%
-		z-index: 100
 		+transition(visibility, .2s)
 .chan
 	+clr
@@ -184,6 +183,8 @@ body
 		font-size: 9px
 		color: $white
 		+transition(border-color, .2s)
+		+r(768)
+			margin-top: 10px
 		&:hover
 			border-color: lighten($grey, 15%)		
 	&_transparent
@@ -194,8 +195,6 @@ body
 		+transition(border-color, .2s)
 		&:hover
 			border-color: darken($blue, 10%)
-		+r(768)
-			text-align: center
 	&_subscr
 		margin-top: 30px
 		padding: 12px 55px 12px 89px
@@ -214,7 +213,9 @@ body
 				+svg(mail, 24, 18)
 		&:hover
 			background: darken($blue, 10%) 
-		 
+.btn-wrap
+	+r(768)
+		text-align: center
 		
 .title
 	margin-bottom: 11px
@@ -232,6 +233,8 @@ body
 	text-transform: uppercase
 .copyright
 	margin-top: 5px
+	+r(768)
+		text-align: center
 	span
 		padding-top: 2px
 .icon-design
