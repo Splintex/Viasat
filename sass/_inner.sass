@@ -1,0 +1,84 @@
+.slider
+	position: relative
+	margin: 20px 0 
+	&__prev-img,
+	&__next-img
+		position: absolute
+		bottom: 0
+		width: 140px
+		height: 80px
+		pointer-events: none
+		overflow: hidden
+		img
+			height: 100%
+			width: auto
+	&__prev-img
+		left: 0
+	&__next-img
+		right: 0
+.caption
+	position: absolute
+	bottom: 0
+	left: 140px
+	right: 140px
+	background: rgba($main-dark, .9) 
+	+r(992)
+		position: static
+		background: $main-dark  
+	li
+		display: none
+	&__item
+		display: table
+		width: 100%
+		table-layout: fixed
+	&__info,
+	&__media
+		display: table-cell
+		vertical-align: middle
+		height: 80px
+	&__info
+		padding: 0 30px 
+		color: #fff 
+		strong
+			display: block
+			font-size: 22px
+			line-height: 1.2
+			font-weight: normal
+			+ubold
+			text-transform: uppercase
+			+r(992)
+				font-size: 18px
+		span
+			font-size: 13px
+			+ulight
+			opacity: 0.4
+	&__media
+		text-align: right
+		padding-right: 30px
+		img
+			vertical-align: middle
+.btn-prev,
+.btn-next
+	position: absolute
+	bottom: 0
+	top: auto
+	width: 140px
+	height: 80px
+	line-height: 80px
+	text-align: center
+	background: rgba($blue, .8)
+	+tr(background .3s)
+	&:hover
+		background: rgba($blue, .6)
+	&:before
+		content: ""
+		display: inline-block
+		vertical-align: middle
+.btn-prev
+	left: 0
+	&:before
+		+svg(prev,34,34)
+.btn-next
+	right: 0
+	&:before
+		+svg(next,34,34)
