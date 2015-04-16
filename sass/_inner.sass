@@ -9,6 +9,10 @@
 		height: 80px
 		pointer-events: none
 		overflow: hidden
+		+r(992)
+			bottom: 80px
+			width: 100px
+			height: 60px
 		img
 			height: 100%
 			width: auto
@@ -64,10 +68,13 @@
 	top: auto
 	width: 140px
 	height: 80px
-	line-height: 80px
 	text-align: center
 	background: rgba($blue, .8)
 	+tr(background .3s)
+	+r(992)
+		bottom: 80px
+		width: 100px
+		height: 60px
 	&:hover
 		background: rgba($blue, .6)
 	&:before
