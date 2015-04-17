@@ -66,15 +66,19 @@ body
 	line-height: 1.5
 	color: $black 
 	min-width: 320px
+	background: $bg 
 	+ulight
 	+r(768)
 		font-size: 14px
 .container
 	max-width: 1280px
 	margin: 0 auto
+	background: $white 
 	&_no-pad
 		.col-xs-12
 			padding: 0
+	&_no-bg
+		background: none 
 .row
 	&_marg
 		margin-bottom: 50px 
@@ -94,13 +98,15 @@ body
 .header
 	background: $main-dark
 	position: relative
-	z-index: 10 
+	z-index: 10
 	+r(992)
 		text-align: center
 	&__logo
 		display: inline-block
-		margin-top: 18px
-		+svg(logo, 105,23)
+		padding: 18px 15px 20px
+		font-size: 0
+.icon-logo	
+	+svg(logo, 105,23)
 		
 .menu
 	+clr
@@ -198,8 +204,7 @@ body
 		font-size: 9px
 		color: $white
 		+transition(border-color, .2s)
-		+r(768)
-			margin-top: 10px
+		margin: 10px 0
 		&:hover
 			border-color: lighten($grey, 15%)		
 	&_transparent
@@ -240,21 +245,23 @@ body
 .text
 	margin: 11px 0 13px
 .footer
-	padding: 10px 0
+	// padding: 10px 0
 	background: $main-dark 
 	font-size: 10px
 	color: $grey
 	text-transform: uppercase
 .copyright
-	margin-top: 5px
 	+r(768)
 		text-align: center
 	span
-		padding-top: 2px
+		display: inline-block
+		margin-top: 17px
+.design-logo
+	display: inline-block
+	padding: 17px 0 15px 12px
+	font-size: 0
 .icon-design
 	display: inline-block
-	margin-left: 12px
-	vertical-align: middle
 	+s(design-lab)
 	 
 .promo-img
