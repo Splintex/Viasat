@@ -78,6 +78,15 @@ body
 .row
 	&_marg
 		margin-bottom: 50px 
+.cols-inline
+	font-size: 0
+	> div
+		float: none !important
+		display: inline-block
+		vertical-align: top
+	.col-xs-6
+		+r(460)
+			width: 100%
 .wrap
 	padding: 80px 0 60px
 	+r(992)
@@ -356,6 +365,7 @@ body
 	&__item
 		+clr
 		+r(768)
+			text-align: center
 			margin-bottom: 20px
 .border
 	background: $black
@@ -366,6 +376,7 @@ body
 	&__title
 		padding-bottom: 10px 
 	&__member
+		margin-top: 30px
 		text-align: center
 	&__img
 		display: inline-block
@@ -381,6 +392,7 @@ body
 			height: auto
 	&__name
 		text-align: center
+		font-size: 16px
 		span
 			display: inline-block
 			margin-top: 18px
