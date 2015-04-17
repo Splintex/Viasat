@@ -224,13 +224,12 @@ body
 		text-align: center
 		
 .name
-	margin-bottom: 11px
 	font-size: 18px
 	text-transform: uppercase 
 	+ubold
 	color: $black
 .text
-	margin-bottom: 13px
+	margin: 11px 0 13px
 .footer
 	padding: 10px 0
 	background: $main-dark 
@@ -349,5 +348,46 @@ body
 		font-size: 40px
 		margin-bottom: 20px
 .contacts
-	margin-top: 48px
+	margin: 48px 0 44px	
 	line-height: 1.4
+	+clr
+	p
+		margin-bottom: 5px
+	&__item
+		+clr
+		+r(768)
+			margin-bottom: 20px
+.border
+	background: $black
+	height: 2px
+.team
+	padding-bottom: 70px
+	+clr
+	&__title
+		padding-bottom: 10px 
+	&__member
+		text-align: center
+	&__img
+		display: inline-block
+		position: relative
+		background: $bg 
+		height: 140px
+		width: 140px
+		border-radius: 50%
+		overflow: hidden
+		+vertical
+		img
+			width: 100%
+			height: auto
+	&__name
+		text-align: center
+		span
+			display: inline-block
+			margin-top: 18px
+			line-height: 1.3
+			+bold
+		p
+			line-height: 1.3
+.icon-photo
+	vertical-align: middle
+	+svg(photo, 44, 36)
