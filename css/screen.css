@@ -28,6 +28,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 @font-face { font-family: museosanscyrl_100; src: url("../fonts/museosanscyrl_100.eot"); src: url("../fonts/museosanscyrl_100.eot?#iefix") format("embedded-opentype"), url("../fonts/museosanscyrl_100.woff2") format("woff2"), url("../fonts/museosanscyrl_100.woff") format("woff"), url("../fonts/museosanscyrl_100.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: museosanscyrl_700; src: url("../fonts/museosanscyrl_700.eot"); src: url("../fonts/museosanscyrl_700.eot?#iefix") format("embedded-opentype"), url("../fonts/museosanscyrl_700.woff2") format("woff2"), url("../fonts/museosanscyrl_700.woff") format("woff"), url("../fonts/museosanscyrl_700.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: museosanscyrl_900; src: url("../fonts/museosanscyrl_900.eot"); src: url("../fonts/museosanscyrl_900.eot?#iefix") format("embedded-opentype"), url("../fonts/museosanscyrl_900.woff2") format("woff2"), url("../fonts/museosanscyrl_900.woff") format("woff"), url("../fonts/museosanscyrl_900.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: museosanscyrl_500; src: url("../fonts/museosanscyrl_500.eot"); src: url("../fonts/museosanscyrl_500.eot?#iefix") format("embedded-opentype"), url("../fonts/museosanscyrl_500.woff2") format("woff2"), url("../fonts/museosanscyrl_500.woff") format("woff"), url("../fonts/museosanscyrl_500.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 a { text-decoration: none; }
 a:hover { text-decoration: none; }
 
@@ -38,7 +39,7 @@ body { font-size: 16px; line-height: 1.5; color: black; min-width: 320px; backgr
 .container_no-pad .col-xs-12 { padding: 0; }
 .container_no-bg { background: none; }
 
-.row_marg { margin-bottom: 50px; }
+.row_marg { margin-bottom: 50px; clear: both; }
 
 .cols-inline { font-size: 0; }
 .cols-inline > div { float: none !important; display: inline-block; vertical-align: top; }
@@ -147,6 +148,7 @@ body { font-size: 16px; line-height: 1.5; color: black; min-width: 320px; backgr
 
 .title { margin-bottom: 32px; font-size: 48px; font-family: "museosanscyrl_900", Arial, sans-serif; text-transform: uppercase; }
 @media only screen and (max-width: 768px) { .title { font-size: 40px; margin-bottom: 20px; } }
+.title_marg { margin-bottom: 3px; }
 
 .contacts { margin: 48px 0 44px; line-height: 1.4; *zoom: 1; }
 .contacts:after { content: " "; display: table; clear: both; }
@@ -180,10 +182,6 @@ body { font-size: 16px; line-height: 1.5; color: black; min-width: 320px; backgr
 @media only screen and (max-width: 1200px) { .channel-menu__link { padding: 7px 15px; } }
 @media only screen and (max-width: 992px) { .channel-menu__link { display: block; } }
 
-.descr { *zoom: 1; }
-.descr:after { content: " "; display: table; clear: both; }
-.descr .title { margin-bottom: -7px; }
-
 .benefits { *zoom: 1; }
 .benefits:after { content: " "; display: table; clear: both; }
 .benefits__item { margin-top: 50px; position: relative; padding-left: 80px; }
@@ -205,6 +203,12 @@ body { font-size: 16px; line-height: 1.5; color: black; min-width: 320px; backgr
 .icon-calendar { background: url("../img/svg/calendar.svg") no-repeat 0 0; -moz-background-size: 44px 44px; -o-background-size: 44px 44px; -webkit-background-size: 44px 44px; background-size: 44px 44px; width: 44px; height: 44px; display: inline-block; }
 
 .icon-chair { background: url("../img/svg/chair.svg") no-repeat 0 0; -moz-background-size: 48px 48px; -o-background-size: 48px 48px; -webkit-background-size: 48px 48px; background-size: 48px 48px; width: 48px; height: 48px; display: inline-block; }
+
+.table { margin-top: 34px; width: 100%; }
+.table tr { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.table tr:nth-child(2n+1) { background: #ebf7fd; border-top: 1px solid #ebebeb; border-bottom: 1px solid #ebebeb; }
+.table td { padding: 8px 20px; font-size: 14px; font-family: "museosanscyrl_100", Arial, sans-serif; width: 50%; }
+.table td:first-child { font-family: "museosanscyrl_500", Arial, sans-serif; font-size: 12px; text-transform: uppercase; }
 
 .slider { position: relative; margin: 20px 0; }
 .slider__prev-img, .slider__next-img { position: absolute; bottom: 0; width: 140px; height: 80px; pointer-events: none; overflow: hidden; }

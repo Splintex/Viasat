@@ -47,6 +47,7 @@
 +font(museosanscyrl_100, museosanscyrl_100)
 +font(museosanscyrl_700, museosanscyrl_700)
 +font(museosanscyrl_900, museosanscyrl_900)
++font(museosanscyrl_500, museosanscyrl_500)
 
 =ulight
 	font-family: "museosanscyrl_100", Arial, sans-serif
@@ -54,6 +55,8 @@
 	font-family: "museosanscyrl_700", Arial, sans-serif 
 =ubold
 	font-family: "museosanscyrl_900", Arial, sans-serif
+=reg
+	font-family: "museosanscyrl_500", Arial, sans-serif
 
 
 a
@@ -81,7 +84,8 @@ body
 		background: none 
 .row
 	&_marg
-		margin-bottom: 50px 
+		margin-bottom: 50px
+		clear: both
 .cols-inline
 	font-size: 0
 	> div
@@ -368,6 +372,8 @@ body
 	+r(768)
 		font-size: 40px
 		margin-bottom: 20px
+	&_marg
+		margin-bottom: 3px
 .contacts
 	margin: 48px 0 44px	
 	line-height: 1.4
@@ -440,10 +446,6 @@ body
 			padding: 7px 15px 
 		+r(992)
 			display: block
-.descr
-	+clr
-	.title
-		margin-bottom: -7px
 .benefits
 	+clr
 	&__item
@@ -472,7 +474,7 @@ body
 			position: absolute
 			width: 12px
 			height: 1px
-			background: #a7dcf8
+			background: $l-blue
 			top: 12px
 			left: -1px
 .icon-flag
@@ -489,3 +491,24 @@ body
 	+svg(calendar,44,44)
 .icon-chair
 	+svg(chair,48,48)
+
+.table
+	margin-top: 34px
+	width: 100%
+	tr
+		+box
+		&:nth-child(2n+1)
+			background: #ebf7fd
+			border-top: 1px solid #ebebeb
+			border-bottom: 1px solid #ebebeb
+	td
+		padding: 8px 20px 
+		font-size: 14px
+		+ulight
+		width: 50%
+		&:first-child
+			+reg
+			font-size: 12px
+			text-transform: uppercase 
+
+		
