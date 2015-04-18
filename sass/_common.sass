@@ -103,8 +103,6 @@ body
 	background: $main-dark
 	position: relative
 	z-index: 10
-	+r(992)
-		text-align: center
 	&__logo
 		display: inline-block
 		padding: 18px 15px 20px
@@ -125,7 +123,7 @@ body
 			.menu__hover
 				display: block
 		+r(992)
-			float: none
+			display: none
 			
 	&__item-link
 		display: inline-block
@@ -150,6 +148,38 @@ body
 		left: 0
 		top: 100%
 		+transition(visibility, .2s)
+.burger
+	display: none
+	position: absolute
+	top: 5px
+	right: 5px
+	height: 50px
+	width: 50px
+	background: #000 
+	+vertical
+	+r(992)
+		display: block
+	i
+		display: inline-block
+		position: relative
+		vertical-align: middle
+		height: 2px
+		width: 30px
+		background: #fff
+		border-radius: 2px 
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			left: 0
+			right: 0 
+			height: 2px
+			background: #fff
+			border-radius: 2px 
+		&:before
+			top: -8px
+		&:after
+			bottom: -8px
 .chan
 	+clr
 	padding: 35px
@@ -491,6 +521,14 @@ body
 	+svg(calendar,44,44)
 .icon-chair
 	+svg(chair,48,48)
+.icon-rate
+	+svg(rate,40,36)
+.icon-sit
+	+svg(sit,40,46)
+.icon-tv
+	+svg(tv,44,36)
+.icon-list
+	+svg(list,44,44)
 
 .table
 	margin-top: 34px
@@ -510,5 +548,9 @@ body
 			+reg
 			font-size: 12px
 			text-transform: uppercase 
+.info
+	+ulight
+	font-size: 14px
+	color: #666 
 
 		

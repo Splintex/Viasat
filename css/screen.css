@@ -49,7 +49,6 @@ body { font-size: 16px; line-height: 1.5; color: black; min-width: 320px; backgr
 @media only screen and (max-width: 992px) { .wrap { padding: 60px 0 40px; } }
 
 .header { background: #1a1a1a; position: relative; z-index: 10; }
-@media only screen and (max-width: 992px) { .header { text-align: center; } }
 .header__logo { display: inline-block; padding: 18px 15px 20px; font-size: 0; }
 
 .icon-logo { background: url("../img/svg/logo.svg") no-repeat 0 0; -moz-background-size: 105px 23px; -o-background-size: 105px 23px; -webkit-background-size: 105px 23px; background-size: 105px 23px; width: 105px; height: 23px; display: inline-block; }
@@ -59,12 +58,20 @@ body { font-size: 16px; line-height: 1.5; color: black; min-width: 320px; backgr
 .menu__item { float: left; position: relative; text-align: center; z-index: 1; }
 .menu__item:hover { background: black; z-index: 2; }
 .menu__item:hover .menu__hover { display: block; }
-@media only screen and (max-width: 992px) { .menu__item { float: none; } }
+@media only screen and (max-width: 992px) { .menu__item { display: none; } }
 .menu__item-link { display: inline-block; padding: 18px 15px 20px; font-family: "museosanscyrl_900", Arial, sans-serif; text-transform: uppercase; color: white; font-size: 14px; z-index: 50; position: relative; }
 @media only screen and (max-width: 1200px) { .menu__item-link { padding: 18px 12px 20px; font-size: 13px; } }
 @media only screen and (max-width: 992px) { .menu__item-link { display: block; padding: 14px 0 16px; } }
 .menu__item-link.is-active { color: #44b6f0; }
 .menu__hover { display: none; position: absolute; left: 0; top: 100%; -moz-transition: visibility, 0.2s; -o-transition: visibility, 0.2s; -webkit-transition: visibility, 0.2s; transition: visibility, 0.2s; }
+
+.burger { display: none; position: absolute; top: 5px; right: 5px; height: 50px; width: 50px; background: black; text-align: center; font-size: 0; }
+.burger:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+@media only screen and (max-width: 992px) { .burger { display: block; } }
+.burger i { display: inline-block; position: relative; vertical-align: middle; height: 2px; width: 30px; background: white; border-radius: 2px; }
+.burger i:before, .burger i:after { content: ""; position: absolute; left: 0; right: 0; height: 2px; background: white; border-radius: 2px; }
+.burger i:before { top: -8px; }
+.burger i:after { bottom: -8px; }
 
 .chan { *zoom: 1; padding: 35px; background: black; min-width: 350px; }
 .chan:after { content: " "; display: table; clear: both; }
@@ -204,11 +211,21 @@ body { font-size: 16px; line-height: 1.5; color: black; min-width: 320px; backgr
 
 .icon-chair { background: url("../img/svg/chair.svg") no-repeat 0 0; -moz-background-size: 48px 48px; -o-background-size: 48px 48px; -webkit-background-size: 48px 48px; background-size: 48px 48px; width: 48px; height: 48px; display: inline-block; }
 
+.icon-rate { background: url("../img/svg/rate.svg") no-repeat 0 0; -moz-background-size: 40px 36px; -o-background-size: 40px 36px; -webkit-background-size: 40px 36px; background-size: 40px 36px; width: 40px; height: 36px; display: inline-block; }
+
+.icon-sit { background: url("../img/svg/sit.svg") no-repeat 0 0; -moz-background-size: 40px 46px; -o-background-size: 40px 46px; -webkit-background-size: 40px 46px; background-size: 40px 46px; width: 40px; height: 46px; display: inline-block; }
+
+.icon-tv { background: url("../img/svg/tv.svg") no-repeat 0 0; -moz-background-size: 44px 36px; -o-background-size: 44px 36px; -webkit-background-size: 44px 36px; background-size: 44px 36px; width: 44px; height: 36px; display: inline-block; }
+
+.icon-list { background: url("../img/svg/list.svg") no-repeat 0 0; -moz-background-size: 44px 44px; -o-background-size: 44px 44px; -webkit-background-size: 44px 44px; background-size: 44px 44px; width: 44px; height: 44px; display: inline-block; }
+
 .table { margin-top: 34px; width: 100%; }
 .table tr { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .table tr:nth-child(2n+1) { background: #ebf7fd; border-top: 1px solid #ebebeb; border-bottom: 1px solid #ebebeb; }
 .table td { padding: 8px 20px; font-size: 14px; font-family: "museosanscyrl_100", Arial, sans-serif; width: 50%; }
 .table td:first-child { font-family: "museosanscyrl_500", Arial, sans-serif; font-size: 12px; text-transform: uppercase; }
+
+.info { font-family: "museosanscyrl_100", Arial, sans-serif; font-size: 14px; color: #666666; }
 
 .slider { position: relative; margin: 20px 0; }
 .slider__prev-img, .slider__next-img { position: absolute; bottom: 0; width: 140px; height: 80px; pointer-events: none; overflow: hidden; }
