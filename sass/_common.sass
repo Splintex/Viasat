@@ -324,12 +324,17 @@ body
 	&__win
 		+svg(win, 44, 42)
 .banner
-	margin: 20px 0 40px 
+	margin: 20px 0 40px
+	position: relative
 	img
 		width: 100%
 		height: auto
 	+r(768)
 		margin-bottom: 20px
+	&__channel
+		position: absolute
+		bottom: 74px
+		left: 50px
 .article
 	+clr
 	padding-bottom: 40px 
@@ -410,3 +415,77 @@ body
 .icon-photo
 	vertical-align: middle
 	+svg(photo, 44, 36)
+	
+.channel-menu
+	margin-bottom: 54px
+	+clr
+	&__item
+		float: left
+		&.is-active
+			border: 4px solid $blue
+		+r(992)
+			float: none
+			text-align: center
+	&__link
+		display: inline-block
+		color: $black 
+		padding: 7px 20px
+		font-size: 14px
+		text-transform: uppercase 
+		+bold
+		+transition(color, .2s)
+		&:hover
+			color: $blue
+		+r(1200)
+			padding: 7px 15px 
+		+r(992)
+			display: block
+.descr
+	+clr
+	.title
+		margin-bottom: -7px
+.benefits
+	+clr
+	&__item
+		margin-top: 50px
+		position: relative
+		padding-left: 80px 
+	&__icon
+		position: absolute
+		display: inline-block
+		left: 10px
+		top: 0
+	&__list-item
+		position: relative
+		margin-top: 9px
+		padding-left: 25px
+		&:before
+			content: ""
+			position: absolute
+			width: 12px
+			height: 1px
+			background: $blue
+			top: 13px
+			left: -1px
+		&:after
+			content: ""
+			position: absolute
+			width: 12px
+			height: 1px
+			background: #a7dcf8
+			top: 12px
+			left: -1px
+.icon-flag
+	+svg(flag,46,47)
+.icon-h24
+	+svg(h24,44,44)
+.icon-people
+	+svg(people,44,36)
+.icon-cup
+	+svg(cup,44,44)
+.icon-shot
+	+svg(shot,44,44)
+.icon-calendar
+	+svg(calendar,44,44)
+.icon-chair
+	+svg(chair,48,48)
