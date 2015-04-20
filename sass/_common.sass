@@ -182,7 +182,11 @@ body
 		height: 2px
 		width: 30px
 		background: #fff
-		border-radius: 2px 
+		border-radius: 2px
+		&:hover
+			&:before,
+			&:after
+				will-change: transform
 		&:before,
 		&:after
 			content: ""
@@ -191,11 +195,21 @@ body
 			right: 0 
 			height: 2px
 			background: #fff
-			border-radius: 2px 
+			border-radius: 2px
+			+transition(transform, .2s) 
 		&:before
 			top: -8px
 		&:after
 			bottom: -8px
+	&.is-active
+		i
+			background: none
+			&:before
+				+rotate(-45)
+				top: 0
+			&:after
+				+rotate(45)
+				bottom: 0 
 .soc
 	font-size: 0
 	a

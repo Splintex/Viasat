@@ -74,9 +74,13 @@ body { font-size: 16px; line-height: 1.5; color: black; min-width: 320px; backgr
 .toggle-menu:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 @media only screen and (max-width: 992px) { .toggle-menu { display: block; } }
 .toggle-menu i { display: inline-block; position: relative; vertical-align: middle; height: 2px; width: 30px; background: white; border-radius: 2px; }
-.toggle-menu i:before, .toggle-menu i:after { content: ""; position: absolute; left: 0; right: 0; height: 2px; background: white; border-radius: 2px; }
+.toggle-menu i:hover:before, .toggle-menu i:hover:after { will-change: transform; }
+.toggle-menu i:before, .toggle-menu i:after { content: ""; position: absolute; left: 0; right: 0; height: 2px; background: white; border-radius: 2px; -moz-transition: -moz-transform, 0.2s; -o-transition: -o-transform, 0.2s; -webkit-transition: -webkit-transform, 0.2s; transition: transform, 0.2s; }
 .toggle-menu i:before { top: -8px; }
 .toggle-menu i:after { bottom: -8px; }
+.toggle-menu.is-active i { background: none; }
+.toggle-menu.is-active i:before { -ms-transform: rotate(-45deg); -webkit-transform: rotate(-45deg); transform: rotate(-45deg); top: 0; }
+.toggle-menu.is-active i:after { -ms-transform: rotate(45deg); -webkit-transform: rotate(45deg); transform: rotate(45deg); bottom: 0; }
 
 .soc { font-size: 0; }
 .soc a { float: left; width: 33.3%; background-position: 50% 50%; background-repeat: no-repeat; }
