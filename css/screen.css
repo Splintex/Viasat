@@ -227,6 +227,36 @@ body { font-size: 16px; line-height: 1.5; color: black; min-width: 320px; backgr
 
 .info { font-family: "museosanscyrl_100", Arial, sans-serif; margin-top: 10px; font-size: 14px; color: #666666; }
 
+.progress { margin-right: 40px; text-align: center; width: 60px; float: left; }
+@media only screen and (max-width: 768px) { .progress { width: 50px; margin-right: 25px; } }
+@media only screen and (max-width: 570px) { .progress { float: none; } }
+.progress.is-active .progress__line { background: #44b6f0; }
+.progress.is-active .progress__name { font-family: "museosanscyrl_700", Arial, sans-serif; }
+.progress__main { position: relative; height: 320px; }
+@media only screen and (max-width: 768px) { .progress__main { height: 250px; } }
+.progress__name { display: inline-block; margin-top: 20px; font-size: 14px; }
+.progress__line { position: absolute; right: 0; left: 0; bottom: 0; background: #bdcad0; }
+.progress__line span { position: absolute; right: 0; left: 0; bottom: 5px; font-size: 14px; }
+.progress__icon { position: absolute; top: -60px; right: 0; left: 0; }
+
+.progress-wrap { *zoom: 1; margin-top: 40px; }
+.progress-wrap:after { content: " "; display: table; clear: both; }
+@media only screen and (max-width: 768px) { .progress-wrap { margin-top: 50px; } }
+
+.icon-horror { background: url("../img/svg/horror.svg") no-repeat 0 0; -moz-background-size: 38px 41px; -o-background-size: 38px 41px; -webkit-background-size: 38px 41px; background-size: 38px 41px; width: 38px; height: 41px; display: inline-block; }
+
+.icon-children { background: url("../img/svg/children.svg") no-repeat 0 0; -moz-background-size: 63px 30px; -o-background-size: 63px 30px; -webkit-background-size: 63px 30px; background-size: 63px 30px; width: 63px; height: 30px; display: inline-block; top: -50px; }
+
+.icon-soap-opera { background: url("../img/svg/soap-opera.svg") no-repeat 0 0; -moz-background-size: 46px 44px; -o-background-size: 46px 44px; -webkit-background-size: 46px 44px; background-size: 46px 44px; width: 46px; height: 44px; display: inline-block; top: -64px; }
+
+.icon-detective { background: url("../img/svg/detective.svg") no-repeat 0 0; -moz-background-size: 45px 42px; -o-background-size: 45px 42px; -webkit-background-size: 45px 42px; background-size: 45px 42px; width: 45px; height: 42px; display: inline-block; top: -62px; }
+
+.icon-coctail { background: url("../img/svg/coctail.svg") no-repeat 0 0; -moz-background-size: 47px 42px; -o-background-size: 47px 42px; -webkit-background-size: 47px 42px; background-size: 47px 42px; width: 47px; height: 42px; display: inline-block; top: -62px; }
+
+.icon-drama { background: url("../img/svg/drama.svg") no-repeat 0 0; -moz-background-size: 56px 38px; -o-background-size: 56px 38px; -webkit-background-size: 56px 38px; background-size: 56px 38px; width: 56px; height: 38px; display: inline-block; top: -58px; }
+
+.icon-comedy { background: url("../img/svg/comedy.svg") no-repeat 0 0; -moz-background-size: 36px 55px; -o-background-size: 36px 55px; -webkit-background-size: 36px 55px; background-size: 36px 55px; width: 36px; height: 55px; display: inline-block; top: -75px; }
+
 .slider { position: relative; margin: 20px 0; }
 .slider__prev-img, .slider__next-img { position: absolute; bottom: 0; width: 140px; height: 80px; pointer-events: none; overflow: hidden; }
 @media only screen and (max-width: 992px) { .slider__prev-img, .slider__next-img { bottom: 80px; width: 100px; height: 60px; } }
@@ -266,8 +296,6 @@ body { font-size: 16px; line-height: 1.5; color: black; min-width: 320px; backgr
 .bar__line span { position: absolute; left: -30px; top: 0; bottom: 0; line-height: 16px; font-size: 11px; color: #8d8d8d; }
 .bar__title { font-size: 14px; }
 .bar_marg { margin-top: 55px; }
-.bar_vertical { margin-left: 40px; width: 60px; }
-.bar_vertical .bar__line span { left: 0; bottom: 0; }
 
 .fotorama__arr:focus:after, .fotorama__fullscreen-icon:focus:after, .fotorama__html, .fotorama__img, .fotorama__nav__frame:focus .fotorama__dot:after, .fotorama__nav__frame:focus .fotorama__thumb:after, .fotorama__stage__frame, .fotorama__stage__shaft, .fotorama__video iframe { position: absolute; width: 100%; height: 100%; top: 0; right: 0; left: 0; bottom: 0; }
 

@@ -553,5 +553,70 @@ body
 	margin-top: 10px
 	font-size: 14px
 	color: #666 
+.progress
+	margin-right: 40px
+	text-align: center	
+	width: 60px
+	float: left
+	+r(768)
+		width: 50px
+		margin-right: 25px
+	+r(570)
+		float: none
+	&.is-active
+		.progress__line
+			background: $blue
+		.progress__name
+			+bold
+	&__main
+		position: relative
+		height: 320px
+		+r(768)
+			height: 250px
 
-		
+	&__name
+		display: inline-block
+		margin-top: 20px
+		font-size: 14px		
+	&__line
+		position: absolute
+		right: 0
+		left: 0
+		bottom: 0
+		background: #bdcad0
+		span
+			position: absolute
+			right: 0
+			left: 0
+			bottom: 5px
+			font-size: 14px
+	&__icon
+		position: absolute
+		top: -60px
+		right: 0
+		left: 0
+.progress-wrap
+	+clr
+	margin-top: 40px
+	+r(768)
+		margin-top: 50px
+.icon-horror
+	+svg(horror, 38, 41)
+.icon-children
+	+svg(children, 63, 30)
+	top: -50px
+.icon-soap-opera
+	+svg(soap-opera,46,44)
+	top: -64px
+.icon-detective
+	+svg(detective, 45, 42)
+	top: -62px
+.icon-coctail
+	+svg(coctail, 47, 42)
+	top: -62px
+.icon-drama
+	+svg(drama, 56, 38)
+	top: -58px
+.icon-comedy
+	+svg(comedy,36,55)
+	top: -75px
