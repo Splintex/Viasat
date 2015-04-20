@@ -1,6 +1,9 @@
 .slider
 	position: relative
 	margin: 20px 0 
+	&__in
+		+r(640)
+			position: relative
 	&__prev-img,
 	&__next-img
 		position: absolute
@@ -13,6 +16,8 @@
 			bottom: 80px
 			width: 100px
 			height: 60px
+		+r(640)
+			display: none
 		img
 			height: 100%
 			width: auto
@@ -29,6 +34,7 @@
 	+r(992)
 		position: static
 		background: $main-dark  
+		
 	li
 		display: none
 	&__item
@@ -43,6 +49,9 @@
 	&__info
 		padding: 0 30px 
 		color: #fff 
+		+r(640)
+			padding: 0 20px
+			width: 70%
 		strong
 			display: block
 			font-size: 22px
@@ -52,6 +61,8 @@
 			text-transform: uppercase
 			+r(992)
 				font-size: 18px
+			+r(640)
+				font-size: 16px
 		span
 			font-size: 13px
 			+ulight
@@ -61,6 +72,7 @@
 		padding-right: 30px
 		img
 			vertical-align: middle
+			max-width: 100%
 .btn-prev,
 .btn-next
 	position: absolute
@@ -71,22 +83,35 @@
 	text-align: center
 	background: rgba($blue, .8)
 	+tr(background .3s)
-	+r(992)
-		bottom: 80px
-		width: 100px
-		height: 60px
 	&:hover
 		background: rgba($blue, .6)
+		+r(640)
+			background: none
 	&:before
 		content: ""
 		display: inline-block
 		vertical-align: middle
+	+r(992)
+		bottom: 80px
+		width: 100px
+		height: 60px
+	+r(640)
+		bottom: auto
+		top: 50%
+		margin-top: -17px
+		width: 34px
+		height: 34px
+		background: none
 .btn-prev
 	left: 0
+	+r(640)
+		left: 20px
 	&:before
 		+svg(prev,34,34)
 .btn-next
 	right: 0
+	+r(640)
+		right: 20px
 	&:before
 		+svg(next,34,34)
 

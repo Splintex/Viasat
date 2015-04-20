@@ -95,6 +95,13 @@ $(document).ready(function() {
         window.location.hash = this.hash;
         return false;
     });
+
+    $(".js-toggle-menu").on("touchstart click",function () {
+    	$(".menu").parent().toggleClass("is-visible");
+    	$(this).toggleClass("is-active");
+		return false;
+    });
+
 	
 });
 
