@@ -89,3 +89,32 @@
 	right: 0
 	&:before
 		+svg(next,34,34)
+
+.bar
+	margin-bottom: 10px
+	+clr
+	+ulight
+	&.is-active
+		.bar__line
+			background: $blue 
+		.bar__title
+			+ubold
+	&__main
+		position: relative
+		height: 16px
+	&__line
+		position: absolute
+		right: 0
+		top: 0
+		bottom: 0
+		background: #bdcad0 
+		span
+			position: absolute
+			left: -30px
+			top: 0
+			bottom: 0
+			line-height: 16px
+			font-size: 11px
+			color: #8d8d8d 
+	&__title
+		font-size: 14px
