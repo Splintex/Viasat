@@ -29,6 +29,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 @font-face { font-family: museosanscyrl_700; src: url("../fonts/museosanscyrl_700.eot"); src: url("../fonts/museosanscyrl_700.eot?#iefix") format("embedded-opentype"), url("../fonts/museosanscyrl_700.woff2") format("woff2"), url("../fonts/museosanscyrl_700.woff") format("woff"), url("../fonts/museosanscyrl_700.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: museosanscyrl_900; src: url("../fonts/museosanscyrl_900.eot"); src: url("../fonts/museosanscyrl_900.eot?#iefix") format("embedded-opentype"), url("../fonts/museosanscyrl_900.woff2") format("woff2"), url("../fonts/museosanscyrl_900.woff") format("woff"), url("../fonts/museosanscyrl_900.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: museosanscyrl_500; src: url("../fonts/museosanscyrl_500.eot"); src: url("../fonts/museosanscyrl_500.eot?#iefix") format("embedded-opentype"), url("../fonts/museosanscyrl_500.woff2") format("woff2"), url("../fonts/museosanscyrl_500.woff") format("woff"), url("../fonts/museosanscyrl_500.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: helveticaneuecyr-roman; src: url("../fonts/helveticaneuecyr-roman.eot"); src: url("../fonts/helveticaneuecyr-roman.eot?#iefix") format("embedded-opentype"), url("../fonts/helveticaneuecyr-roman.woff2") format("woff2"), url("../fonts/helveticaneuecyr-roman.woff") format("woff"), url("../fonts/helveticaneuecyr-roman.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 a { text-decoration: none; }
 a:hover { text-decoration: none; }
 
@@ -280,6 +281,21 @@ body { font-size: 16px; line-height: 1.5; color: black; min-width: 320px; backgr
 .icon-drama { background: url("../img/svg/drama.svg") no-repeat 0 0; -moz-background-size: 56px 38px; -o-background-size: 56px 38px; -webkit-background-size: 56px 38px; background-size: 56px 38px; width: 56px; height: 38px; display: inline-block; top: -58px; }
 
 .icon-comedy { background: url("../img/svg/comedy.svg") no-repeat 0 0; -moz-background-size: 36px 55px; -o-background-size: 36px 55px; -webkit-background-size: 36px 55px; background-size: 36px 55px; width: 36px; height: 55px; display: inline-block; top: -75px; }
+
+.overlay { position: fixed; top: 0; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.5); *zoom: 1; }
+.overlay:after { content: " "; display: table; clear: both; }
+
+.popup { position: fixed; top: 50px; left: 50%; margin-left: -400px; width: 800px; padding: 42px 100px 50px; background: black; z-index: 100; }
+@media only screen and (max-width: 1024px) { .popup { position: absolute; top: 0; bottom: 0; width: 100%; margin: 0; left: 0; } }
+.popup__btn-close { display: inline-block; position: absolute; background: url("../img/svg/btn-close.svg") no-repeat 0 0; -moz-background-size: 26px 26px; -o-background-size: 26px 26px; -webkit-background-size: 26px 26px; background-size: 26px 26px; width: 26px; height: 26px; display: inline-block; top: 20px; right: 20px; }
+.popup__btn-close:active { top: 22px; }
+.popup__title { display: inline-block; margin-bottom: 45px; color: white; text-transform: uppercase; font-size: 48px; font-family: "museosanscyrl_900", Arial, sans-serif; }
+.popup__input { margin-bottom: 20px; padding: 0 8px; height: 42px; border-bottom: 2px solid transparent; background: #2a2a2a; color: #828282; font-family: "helveticaneuecyr-roman", Arial, sans-serif; width: 100%; }
+.popup__input:focus { border-bottom: 2px solid #44b6f0; }
+.popup__checkbox-title { margin-top: 15px; color: white; font-family: "museosanscyrl_900", Arial, sans-serif; text-transform: uppercase; }
+.popup__checkbox { opacity: 0; }
+.popup__checkbox span { font-family: "helveticaneuecyr-roman", Arial, sans-serif; font-size: 14px; color: white; }
+.popup__mention { margin-top: 40px; font-size: 14px; font-family: "museosanscyrl_900", Arial, sans-serif; color: white; text-transform: uppercase; }
 
 .slider { position: relative; margin: 20px 0; }
 @media only screen and (max-width: 640px) { .slider__in { position: relative; } }

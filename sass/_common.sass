@@ -48,6 +48,7 @@
 +font(museosanscyrl_700, museosanscyrl_700)
 +font(museosanscyrl_900, museosanscyrl_900)
 +font(museosanscyrl_500, museosanscyrl_500)
++font(helveticaneuecyr-roman,helveticaneuecyr-roman)
 
 =ulight
 	font-family: "museosanscyrl_100", Arial, sans-serif
@@ -57,7 +58,8 @@
 	font-family: "museosanscyrl_900", Arial, sans-serif
 =reg
 	font-family: "museosanscyrl_500", Arial, sans-serif
-
+=helvetica
+	font-family: "helveticaneuecyr-roman", Arial, sans-serif 
 
 a
 	text-decoration: none
@@ -320,7 +322,7 @@ body
 				left: -34px 
 				+svg(mail, 24, 18)
 		&:hover
-			background: darken($blue, 10%) 
+			background: darken($blue, 10%)
 .btn-wrap
 	+r(768)
 		text-align: center
@@ -687,3 +689,72 @@ body
 .icon-comedy
 	+svg(comedy,36,55)
 	top: -75px
+
+.overlay
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	background: rgba(#000, .5)
+	+clr
+.popup
+	position: fixed
+	top: 50px
+	left: 50%
+	margin-left: -400px
+	width: 800px
+	padding: 42px 100px 50px
+	background: $black
+	z-index: 100
+	+r(1024)
+		position: absolute
+		top: 0
+		bottom: 0
+		width: 100%
+		margin: 0
+		left: 0
+	&__btn-close
+		display: inline-block
+		position: absolute
+		+svg(btn-close, 26,26)
+		top: 20px
+		right: 20px
+		&:active
+			top: 22px
+	&__title
+		display: inline-block
+		margin-bottom: 45px
+		color: $white
+		text-transform: uppercase
+		font-size: 48px
+		+ubold
+	&__input
+		margin-bottom: 20px
+		padding: 0 8px
+		height: 42px
+		border-bottom: 2px solid transparent 
+		background: $input 
+		color: #828282 
+		+helvetica
+		width: 100%
+		&:focus
+			border-bottom: 2px solid $blue
+	&__checkbox-title
+		margin-top: 15px
+		color: $white 
+		+ubold
+		text-transform: uppercase
+	&__checkbox
+		opacity: 0
+		span
+			+helvetica
+			font-size: 14px
+			color: #FFF
+	&__mention
+		margin-top: 40px
+		font-size: 14px
+		+ubold
+		color: $white
+		text-transform: uppercase
+		   
