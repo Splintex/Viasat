@@ -102,6 +102,26 @@ $(document).ready(function() {
 		return false;
     });
 
+// popup
+    $(".js-toggle-popup").on("click", function(){
+    		var popup = $(this).attr("href");
+    		$(".js-popup").fadeOut(300);
+    		$("."+popup).fadeIn(300);
+    		$(".js-overlay").fadeIn(300);
+    		return false;
+    	});
+
+    	$(".js-overlay").on("click", function(event){
+    		$(".js-popup").fadeOut(300);
+    		$(this).fadeOut(300);
+    	});
+
+    	$(".js-close-popup").on("click", function(){
+    		$(".js-popup").fadeOut(300);
+    		$(".js-overlay").fadeOut(300);
+    		return false;
+    	});
+
 	
 });
 

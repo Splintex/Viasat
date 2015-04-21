@@ -370,12 +370,79 @@
 					<div class="subscribe__title">
 						Нужны наши промо-ролики?
 					</div>
-					<a href="#" class="btn btn_subscr">
+					<a href="js-popup-subscribe" class="btn btn_subscr js-toggle-popup">
 						<span>Подписаться</span>
 					</a>
 				</div>
 			</div>
 		</div>
+	</div>
+</div>
+<div class="overlay js-overlay">
+</div>
+<div class="popup js-popup js-popup-subscribe">
+	<button type="button" class="popup__btn-close js-close-popup"></button>
+	<div class="row">
+		<form>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+				<span class="popup__title">
+					Подписаться
+				</span>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<input type="text" placeholder="Имя и фамилия*" class="input" required>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<input type="email" placeholder="Электронная почта*" class="input" required>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+				<input type="text" placeholder="Компания" class="input">
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+				<input type="text" placeholder="Город" class="input">
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="popup__checkbox-title">
+					мне нужны:
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+				<label class="checkbox">
+					<input type="checkbox">
+					<span>
+						<i></i>
+						<em>Промо-ролики</em>
+					</span>
+				</label>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+				<label class="checkbox">
+					<input type="checkbox">
+					<span>
+						<i></i>
+						<em>Телепрограмма каналов Viasat</em>
+					</span>
+				</label>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+				<label class="checkbox">
+					<input type="checkbox">
+					<span>
+						<i></i>
+						<em>Рассылка премьер на следующий месяц</em>
+					</span>
+				</label>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+				<button type="submit" class="btn btn_subscr">
+					<span>Подписаться</span>
+				</button>
+				<div class="popup__mention">
+					Если вас интересует другой вопрос, то свяжитесь с нами. 
+					Наши данные в разделе «<a href="#" class="link">Контакты</a>»
+				</div>
+			</div>
+		</form>
 	</div>
 </div>
 <div class="footer">

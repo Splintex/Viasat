@@ -58,8 +58,6 @@
 	font-family: "museosanscyrl_900", Arial, sans-serif
 =reg
 	font-family: "museosanscyrl_500", Arial, sans-serif
-=helvetica
-	font-family: "helveticaneuecyr-roman", Arial, sans-serif 
 
 a
 	text-decoration: none
@@ -691,31 +689,37 @@ body
 	top: -75px
 
 .overlay
+	display: none
 	position: fixed
 	top: 0
 	bottom: 0
 	left: 0
 	right: 0
 	background: rgba(#000, .5)
+	z-index: 11
 	+clr
 .popup
+	display: none
 	position: fixed
-	top: 50px
+	top: 50%
 	left: 50%
 	margin-left: -400px
 	width: 800px
 	padding: 42px 100px 50px
 	background: $black
-	z-index: 100
+	z-index: 11
+	overflow-y: auto
+	+transform(translateY(-50%))
+	+r(768)
+		padding: 42px 20px 50px 
 	+r(1024)
-		position: absolute
 		top: 0
 		bottom: 0
 		width: 100%
 		margin: 0
 		left: 0
+		+transform(translateY(0))
 	&__btn-close
-		display: inline-block
 		position: absolute
 		+svg(btn-close, 26,26)
 		top: 20px
@@ -729,32 +733,84 @@ body
 		text-transform: uppercase
 		font-size: 48px
 		+ubold
-	&__input
-		margin-bottom: 20px
-		padding: 0 8px
-		height: 42px
-		border-bottom: 2px solid transparent 
-		background: $input 
-		color: #828282 
-		+helvetica
-		width: 100%
-		&:focus
-			border-bottom: 2px solid $blue
+		+r(748)
+			font-size: 30px
 	&__checkbox-title
 		margin-top: 15px
+		margin-bottom: 5px
 		color: $white 
 		+ubold
 		text-transform: uppercase
-	&__checkbox
-		opacity: 0
-		span
-			+helvetica
-			font-size: 14px
-			color: #FFF
 	&__mention
 		margin-top: 40px
 		font-size: 14px
 		+ubold
 		color: $white
 		text-transform: uppercase
-		   
+		a
+			text-decoration: none
+			border-bottom: 1px solid 
+.input
+	display: block
+	width: 100%
+	margin-bottom: 20px
+	padding: 0 8px
+	height: 42px
+	font-size: 14px
+	border-bottom: 2px solid transparent 
+	background: $input 
+	color: #fff 
+	+ulight
+	width: 100%
+	+placeholder
+		color: #828282 
+	&:focus
+		border-bottom: 2px solid $blue
+
+.checkbox
+	display: inline-block
+	cursor: pointer
+	input
+		position: absolute
+		top: 0
+		opacity: 0
+		&:checked
+			+ span
+				i
+					&:before
+						display: block
+	span
+		position: relative
+		display: block
+		font-size: 12px
+		color: #828282 
+		+ulight
+		+r(768)
+			font-size: 14px
+	i
+		display: table-cell
+		vertical-align: middle
+		position: relative
+		width: 42px
+		height: 42px
+		&:before
+			content: ""
+			position: absolute 
+			top: 11px
+			left: 8px
+			z-index: 2
+			+svg(check,27,22)
+			display: none
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			width: 42px
+			height: 42px
+			background: #2a2a2a 
+	em
+		font-style: normal
+		padding-left: 12px
+		display: table-cell
+		vertical-align: middle
