@@ -103,15 +103,20 @@ body
 	background: $main-dark
 	position: relative
 	z-index: 10
+	height: 60px
+	line-height: 60px
 	&__logo
-		display: inline-block
-		padding: 18px 15px 20px
-		font-size: 0
+		position: absolute
+		top: 0
+		left: 10px
+		padding: 0 15px 
 	.soc
 		a
 			height: 60px
 .icon-logo	
 	+svg(logo, 105,23)
+	margin-top: -3px
+	vertical-align: middle
 .menu-wrap
 	+r(992)
 		display: none
@@ -126,11 +131,14 @@ body
 			display: block		
 .menu
 	+clr
+	+r(992)
+		padding-bottom: 20px
 	&__item
 		float: left
 		position: relative
 		text-align: center
 		z-index: 1		
+		line-height: 1.5
 		&:hover
 			background: $black
 			z-index: 2 
@@ -141,19 +149,23 @@ body
 			
 	&__item-link
 		display: inline-block
-		padding: 18px 15px 20px
+		padding: 0 15px
 		+ubold
 		text-transform: uppercase
 		color: $white
 		font-size: 14px
 		z-index: 50
+		height: 60px
+		line-height: 60px
 		position: relative
 		+r(1200)
-			padding: 18px 12px 20px
+			padding: 0 12px
 			font-size: 13px
 		+r(992)
 			display: block
-			padding: 14px 0 16px
+			padding: 0
+			height: 40px
+			line-height: 40px
 		&.is-active
 			color: $blue
 	&__hover
@@ -171,6 +183,7 @@ body
 	right: 5px
 	height: 50px
 	width: 50px
+	line-height: 50px
 	background: #000 
 	+vertical
 	+r(992)
@@ -441,19 +454,23 @@ body
 			font-size: 40px
 			margin-bottom: 20px
 	a
+		display: inline-block
 		color: $blue
-		text-decoration: underline
+		border-bottom: 1px solid rgba(#44b6f0, .2)
+		line-height: 1
 		&:hover
-			text-decoration: none
+			border-bottom-color: transparent
 	p
 		margin-bottom: 23px
 	strong
 		+bold
 .link
+	display: inline-block
 	color: $blue
-	text-decoration: underline
+	border-bottom: 1px solid rgba(#44b6f0, .2)
+	line-height: 1
 	&:hover
-		text-decoration: none
+		border-bottom-color: transparent
 .title
 	margin-bottom: 32px
 	font-size: 48px
@@ -620,7 +637,14 @@ body
 	margin-bottom: 100px
 	padding-top: 85px
 	font-size: 0
-	overflow-y: auto
+	
+	+r(992)
+		overflow-y: auto
++keyframes(progress)
+	0
+		height: 0
+	100%
+		height: 100%
 .progress
 	margin-right: 40px
 	text-align: center	
@@ -634,7 +658,8 @@ body
 		float: none
 	&.is-active
 		.progress__line
-			background: $blue
+			em
+				background: $blue
 		.progress__name
 			+bold
 	&__main
@@ -654,21 +679,33 @@ body
 		right: 0
 		left: 0
 		bottom: 0
-		background: #bdcad0
-		span
+		text-align: center
+		em
 			position: absolute
+			bottom: 0
 			right: 0
 			left: 0
-			bottom: 5px
-			font-size: 14px
-	&__icon
+			height: 0
+			background: #bdcad0
+		i
+			display: inline-block
+			position: relative
+	&__percent
 		position: absolute
-		top: -60px
 		right: 0
 		left: 0
-
+		bottom: 5px
+		z-index: 2
+		font-size: 14px
+		
+.is-visible
+	.progress
+		&__line
+			em
+				+animation(progress .4s linear .1s forwards)
 .icon-horror
 	+svg(horror, 38, 41)
+	top: -62px
 .icon-children
 	+svg(children, 63, 30)
 	top: -50px

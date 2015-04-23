@@ -73,14 +73,17 @@ $(document).ready(function() {
 	function tabsLoad() {
         var hash = window.location.hash;
         if (hash) {
-            $('[href="'+hash+'"]').parents(".js-tabs-group").find(".js-tabs-content").hide();
-            $('[data-id="'+hash+'"]').show();
+            $('[href="'+hash+'"]').parents(".js-tabs-group").find(".js-tabs-content").hide().removeClass("is-visible");
+            $('[data-id="'+hash+'"]').addClass("is-visible").show();
             $('[href="'+hash+'"]').parents(".js-tabs").find("li").removeClass("is-active");
             $('[href="'+hash+'"]').parent().addClass("is-active");
         }
         else {
-            $('.js-tabs li:first').addClass("is-active");
-            $('.js-tabs').next().show();
+        	if ($('.js-tabs').length > 0) {
+        		$('.js-tabs li:first').addClass("is-active");
+        		window.location.hash = $('.js-tabs li:first a').attr("href");
+        	}
+            
         }
         
     }
@@ -90,8 +93,8 @@ $(document).ready(function() {
         var content = $(this).attr("href");
         $(this).parents(".js-tabs").find("li").removeClass("is-active");
         $(this).parent().addClass("is-active");
-        $(this).parents(".js-tabs-group").find(".js-tabs-content").hide();
-        $('[data-id="'+content+'"]').show();
+        $(this).parents(".js-tabs-group").find(".js-tabs-content").hide().removeClass("is-visible");
+        $('[data-id="'+content+'"]').addClass("is-visible").show();
         window.location.hash = this.hash;
         return false;
     });
