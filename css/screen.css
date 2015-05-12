@@ -270,18 +270,18 @@ body { font-size: 16px; line-height: 1.5; color: black; min-width: 320px; backgr
 .progress { margin-right: 40px; text-align: center; width: 60px; display: inline-block; vertical-align: bottom; }
 @media only screen and (max-width: 768px) { .progress { width: 50px; margin-right: 25px; } }
 @media only screen and (max-width: 570px) { .progress { float: none; } }
-.progress.is-active .progress__line em { background: #44b6f0; }
+.progress.is-active .progress__col { background: #44b6f0; }
 .progress.is-active .progress__name { font-family: "museosanscyrl_700", Arial, sans-serif; }
 .progress__main { position: relative; height: 320px; }
 @media only screen and (max-width: 768px) { .progress__main { height: 250px; } }
 .progress__name { display: inline-block; margin-top: 20px; font-size: 14px; }
 @media only screen and (max-width: 768px) { .progress__name { font-size: 12px; } }
 .progress__line { position: absolute; right: 0; left: 0; bottom: 0; text-align: center; }
-.progress__line em { position: absolute; bottom: 0; right: 0; left: 0; height: 0; background: #bdcad0; }
-.progress__line i { display: inline-block; position: relative; }
+.progress__col { position: absolute; bottom: 0; right: 0; left: 0; height: 0; background: #bdcad0; }
+.progress__icon { display: inline-block; position: relative; }
 .progress__percent { position: absolute; right: 0; left: 0; bottom: 5px; z-index: 2; font-size: 14px; }
 
-.is-visible .progress__line em { -webkit-animation: progress 0.4s linear 0.1s forwards; -moz-animation: progress 0.4s linear 0.1s forwards; -ms-animation: progress 0.4s linear 0.1s forwards; -o-animation: progress 0.4s linear 0.1s forwards; animation: progress 0.4s linear 0.1s forwards; }
+.is-visible .progress__col { -webkit-animation: progress 0.4s linear 0.1s forwards; -moz-animation: progress 0.4s linear 0.1s forwards; -ms-animation: progress 0.4s linear 0.1s forwards; -o-animation: progress 0.4s linear 0.1s forwards; animation: progress 0.4s linear 0.1s forwards; }
 
 .icon-horror { background: url("../img/svg/horror.svg") no-repeat 0 0; -moz-background-size: 38px 41px; -o-background-size: 38px 41px; -webkit-background-size: 38px 41px; background-size: 38px 41px; width: 38px; height: 41px; display: inline-block; top: -62px; }
 
@@ -379,16 +379,16 @@ body { font-size: 16px; line-height: 1.5; color: black; min-width: 320px; backgr
   100% { width: 100%; } }
 .bar { margin-bottom: 10px; *zoom: 1; font-family: "museosanscyrl_100", Arial, sans-serif; }
 .bar:after { content: " "; display: table; clear: both; }
-.bar.is-active .bar__line em { background: #44b6f0; }
+.bar.is-active .bar__em { background: #44b6f0; }
 .bar.is-active .bar__title { font-family: "museosanscyrl_900", Arial, sans-serif; }
 .bar__main { position: relative; height: 16px; }
 .bar__line { position: absolute; right: 0; top: 0; bottom: 0; }
-.bar__line span { position: absolute; left: -30px; top: 0; bottom: 0; line-height: 16px; font-size: 11px; color: #8d8d8d; }
-.bar__line em { position: absolute; top: 0; right: 0; bottom: 0; width: 0; background: #bdcad0; }
+.bar__span { position: absolute; left: -30px; top: 0; bottom: 0; line-height: 16px; font-size: 11px; color: #8d8d8d; }
+.bar__em { position: absolute; top: 0; right: 0; bottom: 0; width: 0; background: #bdcad0; }
 .bar__title { font-size: 14px; }
 .bar_marg { margin-top: 55px; }
 
-.is-visible .bar__line em { -webkit-animation: bar 0.4s linear 0.1s forwards; -moz-animation: bar 0.4s linear 0.1s forwards; -ms-animation: bar 0.4s linear 0.1s forwards; -o-animation: bar 0.4s linear 0.1s forwards; animation: bar 0.4s linear 0.1s forwards; }
+.is-visible .bar__em { -webkit-animation: bar 0.4s linear 0.1s forwards; -moz-animation: bar 0.4s linear 0.1s forwards; -ms-animation: bar 0.4s linear 0.1s forwards; -o-animation: bar 0.4s linear 0.1s forwards; animation: bar 0.4s linear 0.1s forwards; }
 
 .fotorama__arr:focus:after, .fotorama__fullscreen-icon:focus:after, .fotorama__html, .fotorama__img, .fotorama__nav__frame:focus .fotorama__dot:after, .fotorama__nav__frame:focus .fotorama__thumb:after, .fotorama__stage__frame, .fotorama__stage__shaft, .fotorama__video iframe { position: absolute; width: 100%; height: 100%; top: 0; right: 0; left: 0; bottom: 0; }
 

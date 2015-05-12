@@ -657,9 +657,8 @@ body
 	+r(570)
 		float: none
 	&.is-active
-		.progress__line
-			em
-				background: $blue
+		.progress__col			
+			background: $blue
 		.progress__name
 			+bold
 	&__main
@@ -680,16 +679,16 @@ body
 		left: 0
 		bottom: 0
 		text-align: center
-		em
-			position: absolute
-			bottom: 0
-			right: 0
-			left: 0
-			height: 0
-			background: #bdcad0
-		i
-			display: inline-block
-			position: relative
+	&__col
+		position: absolute
+		bottom: 0
+		right: 0
+		left: 0
+		height: 0
+		background: #bdcad0
+	&__icon
+		display: inline-block
+		position: relative
 	&__percent
 		position: absolute
 		right: 0
@@ -700,9 +699,8 @@ body
 		
 .is-visible
 	.progress
-		&__line
-			em
-				+animation(progress .4s linear .1s forwards)
+		&__col
+			+animation(progress .4s linear .1s forwards)
 .icon-horror
 	+svg(horror, 38, 41)
 	top: -62px

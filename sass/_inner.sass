@@ -125,9 +125,8 @@
 	+clr
 	+ulight
 	&.is-active
-		.bar__line
-			em
-				background: $blue 
+		.bar__em
+			background: $blue 
 		.bar__title
 			+ubold
 	&__main
@@ -139,21 +138,21 @@
 		top: 0
 		bottom: 0
 		 
-		span
-			position: absolute
-			left: -30px
-			top: 0
-			bottom: 0
-			line-height: 16px
-			font-size: 11px
-			color: #8d8d8d
-		em
-			position: absolute
-			top: 0
-			right: 0
-			bottom: 0
-			width: 0
-			background: #bdcad0
+	&__span
+		position: absolute
+		left: -30px
+		top: 0
+		bottom: 0
+		line-height: 16px
+		font-size: 11px
+		color: #8d8d8d
+	&__em
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		width: 0
+		background: #bdcad0
 	&__title
 		font-size: 14px
 	&_marg
@@ -161,6 +160,5 @@
 		
 .is-visible
 	.bar
-		&__line
-			em
-				+animation(bar .4s linear .1s forwards)
+		&__em
+			+animation(bar .4s linear .1s forwards)
